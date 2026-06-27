@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Student</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<h1>Edit Student</h1>
+
+<form action="/editStudent/<%= student._id %>" method="POST">
+
+    <input type="text" name="name" value="<%= student.name %>" required>
+
+    <input type="text" name="rollNo" value="<%= student.rollNo %>" required>
+
+    <input type="text" name="course" value="<%= student.course %>" required>
+    <input type="text" name="projectName" value="<%= student.projectName %>" placeholder="Project Name">
+
+<input type="text" name="completionTime" value="<%= student.completionTime %>" placeholder="Completion Time">
+
+    <button type="submit">Update</button>
+
+</form>
+
+<br>
+<a href="/students">Back</a>
+
+</body>
+</html>
